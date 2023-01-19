@@ -26,163 +26,67 @@ class MedatitionScreen1 extends StatelessWidget {
               ),
             ),
             /////IST CARd
-            Med_Screen_Reusable_Container(),
-            FixHeight12(),
-           
+        Med_Screen_Reusable_Container(text10mint: "10 Minutes", 
+        Text1: "Take Nature Year ", 
+        Text2:  "Basics of yoga for begginers and exepercinced ",
+         Container_Color: Color.fromARGB(255, 117, 69, 7),
+         small10: Color.fromARGB(255, 190, 156, 62),
+         small10text:Color.fromARGB(255, 117, 69, 7),lottieI:'assets/Images/med.json',),
+         FixHeight12(),
+         Med_Screen_Reusable_Container(text10mint: "10 Minutes", 
+        Text1: "Flower Medatition ", 
+        Text2:  "Medatition can produce a deep state of relaxation and atranqul ",
+         Container_Color: Color.fromARGB(255, 190, 156, 62),
+          small10:Color.fromARGB(255, 117, 69, 7),
+          small10text: Color.fromARGB(255, 190, 156, 62),lottieI:'assets/Images/med.json',),
+         FixHeight12(),
+        Container(
+         height: MediaQuery.of(context).size.height*0.3, 
+         width: MediaQuery.of(context).size.width*0.8,
+        
+         decoration: BoxDecoration(
+           color:Color.fromARGB(255, 255, 227, 148),
+           borderRadius: BorderRadius.circular(15)
+
+        ),
+      child: Center(child: Column(
+        children: [
+          Center(child:ListTile(
+            title: Center(child: Text("Medatition Can Produce ",)),
+            subtitle: Center(child: Text("Linkin Park ")),
+          )),
+         Container(
+          height: 80,
+          width: 100,
+          color: Colors.amber,
+          child: Text("Audio Icons "),
+         ),
+         FixHeight12(),
+         Row(
+          children: [
+            IconButton(onPressed: (){}, icon:Icon(Icons.download)),
+            FixWidth12(),
+            FixWidth12(),
+            IconButton(onPressed: (){}, icon:Icon(Icons.skip_previous)),
+            IconButton(onPressed: (){}, icon:Icon(Icons.pause)),
+            IconButton(onPressed: (){}, icon:Icon(Icons.skip_next)),
+            FixWidth12(), 
+            FixWidth12(), 
+            IconButton(onPressed: (){}, icon:Icon(Icons.favorite)),
             
-           Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Color.fromARGB(255, 190, 156, 62),
-                ),
-                width: 430,
-                height: 230,
-                child: Row(
-                  children: [
-                    SizedBox(
-                      height: 180,
-                      width: 200,
-                      child: Column(
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                color: Color.fromARGB(255, 117, 69, 7)),
-                            height: 40,
-                            width: 90,
-                            child: Center(
-                              child: Text(
-                                " 10 Minutes",
-                                style: GoogleFonts.abel(
-                                    fontSize: 18, color: Colors.white),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 15.0),
-                            child: ListTile(
-                              title: Text(
-                                "Flower Medatition ",
-                                style: GoogleFonts.pacifico(
-                                    fontSize: 18, color: Colors.black),
-                              ),
-                              subtitle: Text(
-                                "Medatition can produce a deep\nstate of relaxation ",
-                                style: GoogleFonts.roboto(
-                                    fontSize: 18,
-                                    color: Color.fromARGB(255, 117, 69, 7)),
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      child: Lottie.asset('assets/Images/med.json'),
-                    ),
-                  ],
-                )),
-            FixHeight12(),
-
-            Stack(
-              children: [
-                Row(
-                  children: [
-                    FixWidth12(),
-                    Container(
-                      height: 100,
-                      width: 100,
-                      color: Color.fromARGB(255, 190, 156, 62),
-                      child: Lottie.asset('assets/Images/med.json'),
-                    ),
-                    Container(
-                      height: 100,
-                      width: 150,
-                      color: Color.fromARGB(255, 190, 156, 62),
-                      child: Column(
-                        children: [
-                          FixHeight12(),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 28.0),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Color.fromARGB(255, 117, 69, 7),
-                              ),
-                              height: 35,
-                              width: 70,
-                              child: Center(
-                                child: Text(
-                                  " 10 Minutes",
-                                  style: GoogleFonts.abel(
-                                      fontSize: 14, color: Colors.white),
-                                ),
-                              ),
-                            ),
-                          ),
-                          FixHeight12(),
-                          Text(
-                            "Flower Medatition ",
-                            style: GoogleFonts.pacifico(
-                                fontSize: 18, color: Colors.black),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      height: 100,
-                      width: 100,
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 190, 156, 62),
-                      ),
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.more_vert),
-                        alignment: Alignment.topRight,
-                      ),
-                    ),
-                    FixWidth12(),
-                    FixWidth12(),
-                  ],
-                )
-              ],
-            ),
-
-            Column(
-              children: [
-                Container(
-                  alignment: Alignment.centerLeft,
-                  width: 350,
-                  height: 90,
-                  color: Color.fromARGB(255, 190, 156, 62),
-                  child: Row(
-                    children: [
-                      Lottie.asset('assets/Images/med.json'),
-                      Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Color.fromARGB(255, 117, 69, 7)),
-                        height: 30,
-                        width: 70,
-                        child: Text(
-                          " 10 Minutes",
-                          style: GoogleFonts.abel(
-                              fontSize: 14, color: Colors.white),
-                        ),
-                      ),
-                      // IconButton(
-                      //   onPressed: () {},
-                      //   icon: Icon(Icons.more_vert),
-                      //   alignment: Alignment.topRight,
-                      // ),
-                    ],
-                  ),
-                ),
-                Column(
-                  children: [],
-                ),
-              ],
-            )
+          ],
+         ),
+        ],
+      )),
+        ),
+        FixHeight12(),
+         Container(
+         height: MediaQuery.of(context).size.height*0.1, 
+         width: MediaQuery.of(context).size.width*0.8,
+       color: Colors.pinkAccent,
+        ),
+        FixHeight12(),
+     
           ],
         ),
       ),
