@@ -52,14 +52,14 @@ class MedatitionScreen1 extends StatelessWidget {
       child: Center(child: Column(
         children: [
           Center(child:ListTile(
-            title: Center(child: Text("Medatition Can Produce ",)),
-            subtitle: Center(child: Text("Linkin Park ")),
+            title: Center(child: Text("Medatition Can Produce",)),
+            subtitle: Center(child: Text("Linkin Park")),
           )),
          Container(
           height: 80,
           width: 100,
           color: Colors.amber,
-          child: Text("Audio Icons "),
+          child: Text("Audio Icons"),
          ),
          FixHeight12(),
          Row(
@@ -84,6 +84,39 @@ class MedatitionScreen1 extends StatelessWidget {
          height: MediaQuery.of(context).size.height*0.1, 
          width: MediaQuery.of(context).size.width*0.8,
        color: Colors.pinkAccent,
+       child: Row(
+        children: [
+          Lottie.asset('assets/Images/med.json',),
+          Column(
+            children: [
+              FixHeight12(),
+              Padding(
+                        padding: const EdgeInsets.only(right:15.0),
+                        child: Container(
+          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Color.fromARGB(255, 117, 69, 7),),
+                          height: 20,
+                          width: 70,
+                          child: Center(
+                            child: Text(
+                              " 10 Minutes",
+                              style: GoogleFonts.abel(
+                                  fontSize: 10, color: Color.fromARGB(255, 255, 227, 148),),
+                            ),
+                          ),
+                        ),
+                      ),
+                       Text(
+                              " Flower Medatition",
+                              style: GoogleFonts.pacifico(
+                                  fontSize: 15, color: Colors.black,),
+                            ),
+
+            ],
+          )
+        ],
+       ),
         ),
         FixHeight12(),
      

@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       //   "MedatitionScreen": (context) => MedatitionScreen1(),
       //   "WellcomeScreen": (context) => WellcomeBackScreen(),
       // },
-      home: MedatitionScreen1(), 
+      home: ShowPage(),
       );
       
   }

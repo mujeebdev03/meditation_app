@@ -52,6 +52,7 @@ class ShowPage extends StatelessWidget {
                   style: TextStyle(fontSize: 16),
                 )),
           ),
+          FixHeight12(),
           
         ],
       ),
