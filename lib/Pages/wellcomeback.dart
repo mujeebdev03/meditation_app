@@ -179,7 +179,7 @@ class WellcomeBackScreen extends StatelessWidget {
           children: [
             
             commonWellcomescreencontainer(
-              pic: 'assets/Images/yoga1.jpg',
+              pic: 'assets/Images/yoga2.png',
               textR:'Restortive', 
               textB: '20 Sessions'
               ),

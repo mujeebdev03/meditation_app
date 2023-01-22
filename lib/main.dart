@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:med_app_/Pages/MedatitionScreen.dart';
+import 'package:med_app_/Pages/sessionScreen.dart';
 import 'package:med_app_/Pages/wellcomeback.dart';
 
 import 'Pages/showpage.dart/showpage.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       //   "MedatitionScreen": (context) => MedatitionScreen1(),
       //   "WellcomeScreen": (context) => WellcomeBackScreen(),
       // },
-      home: WellcomeBackScreen()
+      home:SessionScreen()
       );
       
   }
