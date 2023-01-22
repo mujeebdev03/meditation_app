@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:med_app_/Const.dart';
@@ -44,13 +45,256 @@ class WellcomeBackScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              SmallContainerW(icon: Icon(Icons.star)),
-              SmallContainerW(icon: Icon(Icons.add)),
-              SmallContainerW(icon: Icon(Icons.add)),
-              SmallContainerW(icon: Icon(Icons.add)),
+              Column(
+                children: [
+                  SmallContainerW(icon: Icon(Icons.star_border),),
+                  FixHeight12(),
+                  Text("Claim"),
+                ],
+              ),
+              Column(
+                children: [
+                  SmallContainerW(icon: Icon(Icons.star_border),),
+                  FixHeight12(),
+                  Text("Relax"),
+                ],
+              ),
+              Column(
+                children: [
+                  SmallContainerW(icon: Icon(Icons.star_border),),
+                  FixHeight12(),
+                  Text("Focus"),
+                ],
+              ),
+              Column(
+                children: [
+                  SmallContainerW(icon: Icon(Icons.star_border),),
+                  FixHeight12(),
+                  Text("Anxious"),
+                ],
+              ),
+              
+
+              
+              
+            ],
+          ),
+         
+         FixHeight12(),
+         FixHeight12(),
+
+
+          Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Color.fromARGB(255, 139, 141, 20),
+          ),
+          width: MediaQuery.of(context).size.width*0.9,
+          height: MediaQuery.of(context).size.height*0.2,
+          child:  Row(
+            children: [
+                SizedBox(
+                height: MediaQuery.of(context).size.height*0.20,
+                width: MediaQuery.of(context).size.width*0.47,
+                child: Padding(
+                  padding: const EdgeInsets.only(right:10.0),
+                  child: Column(
+                    children: [
+                      FixHeight12(),
+                      Padding(
+                        padding: const EdgeInsets.only(right:15.0),
+                        child:  ListTile(
+                        title: Text(
+                          "Cardio Medataion ",
+                          style: GoogleFonts.pacifico(
+                              fontSize: 14, color: Colors.black),
+                        ),
+                        subtitle: Text(
+                          "Basic of Yogo for begginers and expecinced ",
+                          style: GoogleFonts.roboto(
+                              fontSize: 12, color: Colors.white),
+                        ),
+                      ) 
+                      ),
+                      FixHeight12(),
+                     Container(
+          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              ),
+                       height: MediaQuery.of(context).size.height*0.05,
+                width: MediaQuery.of(context).size.width*0.4,
+                          child: ElevatedButton(
+                            style:ElevatedButton.styleFrom(
+                              primary: Color.fromARGB(255, 117, 69, 7),
+                            ),
+  onPressed: () {},
+  child: Row(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      Text('Start Medatition', style: TextStyle(
+        fontSize: 12
+      ),), // <-- Text
+      SizedBox(
+        width: 6,
+      ),
+      Icon( // <-- Icon
+        Icons.play_circle,
+        size: 18.0,
+      ),
+                  
+    ],
+  ),
+),
+                        ),
+                    
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                child: Lottie.asset('assets/Images/med.json'),
+              ),
             ],
           )
+
+
+        ) , 
+        FixHeight12(),
+        Padding(
+          padding: const EdgeInsets.only(left: 8.0),
+          child: Container(
+            alignment: Alignment.centerLeft,
+            
+            child: Text(
+              
+                              "Recommended ",
+                              style: GoogleFonts.abel(
+                                  fontSize: 26, color: Colors.black),
+                            ),
+          ),
+        ),
+        FixHeight12(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            
+            Column(
+              children: [
+                Container(
+                          width: MediaQuery.of(context).size.width*0.4,
+                          height: MediaQuery.of(context).size.height*0.15,
+                          decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 231, 206, 221),
+                          image: DecorationImage(
+                            alignment: Alignment.topCenter,
+                            
+                            image: AssetImage('assets/Images/yogaposee.jpg',
+                            
+                            
+                            ))
+
+                          ),
+                        
+                ),
+                // Container(
+                //     width: MediaQuery.of(context).size.width*0.4,
+                //           height: MediaQuery.of(context).size.height*0.12,
+                //    color: Color.fromARGB(255, 231, 206, 221),
+                //    child: Container(
+                //     color: Colors.red,
+                //     width: 100,
+                //     height: 30,
+                //     child: Container(
+                //       color: Colors.black,
+                //       width: MediaQuery.of(context).size.width*0.2,
+                //           height: MediaQuery.of(context).size.height*0.04,
+                //     ),
+                //    ),
+                // ),
+                Center(
+                child: SizedBox(
+                width: MediaQuery.of(context).size.width*0.4,
+                          height: MediaQuery.of(context).size.height*0.14,
+                  child: Center(
+                    child: Stack(
+                      fit: StackFit.expand,
+                     
+                      children: <Widget>[
+                        Container(
+                         width: MediaQuery.of(context).size.width*0.5,
+                          height: MediaQuery.of(context).size.height*0.12,
+                           color: Color.fromARGB(255, 231, 206, 221),
+                        ), //Container
+                       //Container
+                        Center(
+                         
+                          child: Container(
+                           width: MediaQuery.of(context).size.width*0.35,
+                          height: MediaQuery.of(context).size.height*0.09,
+                            
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(
+                                width: 1,
+                                color: Color.fromARGB(255, 117, 69, 7),
+                                
+                              ),
+                            
+                            ),
+                            child:Column(
+                              children: [
+                                Text('Restoritive'),
+                                SizedBox(
+                                  child:
+                                   TextButton(
+                            style:ElevatedButton.styleFrom(
+                              primary:Colors.transparent
+                            ),
+                          onPressed: () {},
+                          child: Row(
+
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon( // <-- Icon
+                                Icons.play_circle,
+                                size: 15.0,
+                                  color: Color.fromARGB(255, 117, 69, 7),
+                              ),
+                              Text('Start Medatition', style: TextStyle(
+                                fontSize: 12,
+                                  color: Color.fromARGB(255, 117, 69, 7),
+                              ),), // <-- Text
+                              SizedBox(
+                                width: 5,
+                              ),
+                              
+                                          
+                            ],
+                          ),
+                        ), 
+                                                          
+                                )
+                              ],
+                            )
+                          ),
+                        ), //Container
+                      ], //<Widget>[]
+                    ), //Stack
+                  ), //Center
+                ), //SizedBox
+              ) 
+              ],
+            ),
+              Container(
+                      width: MediaQuery.of(context).size.width*0.4,
+                      height: MediaQuery.of(context).size.height*0.25,
+                      color: Colors.green,
+            ),
+          ],
+        )
         ],
+      
+        
       ),
     ));
   }

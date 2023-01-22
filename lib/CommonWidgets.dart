@@ -16,16 +16,18 @@ class SmallContainerW extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 50,
-      height: 60,
+       height: MediaQuery.of(context).size.height*0.1 , 
+         width: MediaQuery.of(context).size.width*0.2,
+         
       child: Icon(
-        Icons.star,
+        Icons.boy,
         color: Colors.white,
       ),
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 190, 156, 62),
+        color: Color.fromARGB(255, 243, 215, 137),
         borderRadius: BorderRadius.circular(10),
       ),
+    
     );
   }
 }
@@ -80,8 +82,8 @@ class Med_Screen_Reusable_Container extends StatelessWidget {
           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: small10),
-                          height: 30,
-                          width: 110,
+                       height: MediaQuery.of(context).size.height*0.04,
+                width: MediaQuery.of(context).size.width*0.3,
                           child: Center(
                             child: Text(
                               " $text10mint",
