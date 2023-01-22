@@ -38,7 +38,8 @@ class MedatitionScreen1 extends StatelessWidget {
         Text2:  "Medatition can produce a deep state of relaxation and atranqul ",
          Container_Color: Color.fromARGB(255, 190, 156, 62),
           small10:Color.fromARGB(255, 117, 69, 7),
-          small10text: Color.fromARGB(255, 190, 156, 62),lottieI:'assets/Images/med.json',),
+          small10text: Color.fromARGB(255, 190, 156, 62),lottieI:'assets/Images/med.json',
+         ),
          FixHeight12(),
         Container(
          height: MediaQuery.of(context).size.height*0.3, 

@@ -178,118 +178,16 @@ class WellcomeBackScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             
-            Column(
-              children: [
-                Container(
-                          width: MediaQuery.of(context).size.width*0.4,
-                          height: MediaQuery.of(context).size.height*0.15,
-                          decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 231, 206, 221),
-                          image: DecorationImage(
-                            alignment: Alignment.topCenter,
-                            
-                            image: AssetImage('assets/Images/yogaposee.jpg',
-                            
-                            
-                            ))
+            commonWellcomescreencontainer(
+              pic: 'assets/Images/yoga1.jpg',
+              textR:'Restortive', 
+              textB: '20 Sessions'
+              ),
+              commonWellcomescreencontainer(
+              pic: 'assets/Images/yoga2.png',
+              textR: 'Energize', 
+              textB: '15 Sessions')
 
-                          ),
-                        
-                ),
-                // Container(
-                //     width: MediaQuery.of(context).size.width*0.4,
-                //           height: MediaQuery.of(context).size.height*0.12,
-                //    color: Color.fromARGB(255, 231, 206, 221),
-                //    child: Container(
-                //     color: Colors.red,
-                //     width: 100,
-                //     height: 30,
-                //     child: Container(
-                //       color: Colors.black,
-                //       width: MediaQuery.of(context).size.width*0.2,
-                //           height: MediaQuery.of(context).size.height*0.04,
-                //     ),
-                //    ),
-                // ),
-                Center(
-                child: SizedBox(
-                width: MediaQuery.of(context).size.width*0.4,
-                          height: MediaQuery.of(context).size.height*0.14,
-                  child: Center(
-                    child: Stack(
-                      fit: StackFit.expand,
-                     
-                      children: <Widget>[
-                        Container(
-                         width: MediaQuery.of(context).size.width*0.5,
-                          height: MediaQuery.of(context).size.height*0.12,
-                           color: Color.fromARGB(255, 231, 206, 221),
-                        ), //Container
-                       //Container
-                        Center(
-                         
-                          child: Container(
-                           width: MediaQuery.of(context).size.width*0.35,
-                          height: MediaQuery.of(context).size.height*0.09,
-                            
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              border: Border.all(
-                                width: 1,
-                                color: Color.fromARGB(255, 117, 69, 7),
-                                
-                              ),
-                            
-                            ),
-                            child:Column(
-                              children: [
-                                Text('Restoritive'),
-                                SizedBox(
-                                  child:
-                                   TextButton(
-                            style:ElevatedButton.styleFrom(
-                              primary:Colors.transparent
-                            ),
-                          onPressed: () {},
-                          child: Row(
-
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Icon( // <-- Icon
-                                Icons.play_circle,
-                                size: 15.0,
-                                  color: Color.fromARGB(255, 117, 69, 7),
-                              ),
-                              Text('Start Medatition', style: TextStyle(
-                                fontSize: 12,
-                                  color: Color.fromARGB(255, 117, 69, 7),
-                              ),), // <-- Text
-                              SizedBox(
-                                width: 5,
-                              ),
-                              
-                                          
-                            ],
-                          ),
-                        ), 
-                                                          
-                                )
-                              ],
-                            )
-                          ),
-                        ), //Container
-                      ], //<Widget>[]
-                    ), //Stack
-                  ), //Center
-                ), //SizedBox
-              ) 
-              ],
-            ),
-              Container(
-                      width: MediaQuery.of(context).size.width*0.4,
-                      height: MediaQuery.of(context).size.height*0.25,
-                      color: Colors.green,
-            ),
           ],
         )
         ],
@@ -297,5 +195,123 @@ class WellcomeBackScreen extends StatelessWidget {
         
       ),
     ));
+  }
+}
+
+class commonWellcomescreencontainer extends StatelessWidget {
+   commonWellcomescreencontainer({
+    required this.pic,
+    required this.textR,
+    required this.textB,
+    
+    Key? key,
+  }) : super(key: key);
+  String pic;
+  String textR;
+  String textB;
+  
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          
+                  width: MediaQuery.of(context).size.width*0.4,
+                  height: MediaQuery.of(context).size.height*0.15,
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 231, 206, 221),
+                    borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                  image: DecorationImage(
+                    alignment: Alignment.topCenter,
+                    
+                    image: AssetImage('$pic',
+                    
+                    
+                    ))
+
+                  ),
+                
+        ),
+    
+        Center(
+        child: SizedBox(
+        width: MediaQuery.of(context).size.width*0.4,
+                  height: MediaQuery.of(context).size.height*0.14,
+          child: Center(
+            child: Stack(
+              
+              fit: StackFit.expand,
+             
+              children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10),bottomRight: Radius.circular(10)),
+                    color: Color.fromARGB(255, 231, 206, 221),
+                  ),
+                 width: MediaQuery.of(context).size.width*0.5,
+                  height: MediaQuery.of(context).size.height*0.12,
+
+                ), //Container
+               //Container
+                Center(
+                 
+                  child: Container(
+                   width: MediaQuery.of(context).size.width*0.35,
+                  height: MediaQuery.of(context).size.height*0.09,
+                    
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        width: 1,
+                        color: Color.fromARGB(255, 117, 69, 7),
+                        
+                      ),
+                    
+                    ),
+                    child:Column(
+                      children: [
+                        Text(" $textR", style: GoogleFonts.arsenal(fontWeight: FontWeight.bold),),
+                        SizedBox(
+                          child:
+                           TextButton(
+                    style:ElevatedButton.styleFrom(
+                     
+                    ),
+                  onPressed: () {},
+                  child: Row(
+
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon( // <-- Icon
+                        Icons.play_circle,
+                        size: 15.0,
+                          color: Color.fromARGB(255, 117, 69, 7),
+                      ),
+                      Text('$textB', style: TextStyle(
+                        fontSize: 12,
+                          color: Color.fromARGB(255, 117, 69, 7),
+                      ),), // <-- Text
+                      SizedBox(
+                        width: 5,
+                      ),
+                      
+                                  
+                    ],
+                  ),
+                ), 
+                                                  
+                        )
+                      ],
+                    )
+                  ),
+                ), //Container
+              ], //<Widget>[]
+            ), //Stack
+          ), //Center
+        ), //SizedBox
+      ) 
+      ],
+    );
   }
 }
