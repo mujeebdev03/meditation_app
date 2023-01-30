@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-import 'package:med_app_/Pages/wellcomeback.dart';
+import 'package:med_app_/src/app/router/router.dart';
 import 'package:med_app_/src/modules/home/screens/home_screen.dart';
 import 'package:med_app_/src/utils/app_textstyles.dart';
 
@@ -31,9 +32,7 @@ class OnBoardingScreen extends StatelessWidget {
             width: 200,
             child: ElevatedButton(
               onPressed: () {
-                // Get.to(MedatitionScreen1());
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => HomeScreen()));
+                Get.toNamed(AppRouter.homeScreen);
               },
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
