@@ -17,6 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       await Future.delayed(const Duration(seconds: 2), () {
         Get.offAllNamed(AppRouter.onBoardingScreen);
+        Get.toNamed(AppRouter.onBoardingScreen);
       });
     });
   }

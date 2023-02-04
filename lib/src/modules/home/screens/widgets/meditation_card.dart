@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:med_app_/src/extensions/aspect_ratio.dart';
 import 'package:med_app_/src/utils/app_textstyles.dart';
@@ -26,38 +27,38 @@ class MeditationCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: backgroundColor,
         ),
         padding:
             const EdgeInsets.only(left: 15.0, right: 15, top: 10, bottom: 10),
-        width: context.width * 1,
+        width: MediaQuery.of(context).size.width * 0.9,
         height: context.height * 0.2,
         child: Row(
           children: [
             SizedBox(
-              height: context.height * 0.15,
-              width: context.width * 0.47,
+              height: context.height * 0.24,
+              width: context.width * 0.5,
               child: Padding(
-                padding: const EdgeInsets.only(right: 10.0),
+                padding: const EdgeInsets.only(right: 15.0),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 15.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: buttonColor),
-                        height: context.height * 0.04,
-                        width: context.width * 0.3,
-                        child: Center(
-                          child: Text(
-                            buttonText,
-                            style: AppTextStyle.kBlackRegular.copyWith(
-                              fontSize: 15,
-                              color: buttonTextColor,
-                            ),
+                    
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: buttonColor),
+                      height: context.height * 0.04,
+                      width: context.width * 0.4,
+                      child: Center(
+                        child: Text(
+                          buttonText,
+                          style:GoogleFonts.aBeeZee(
+                            fontSize: 12,
+                            color: buttonTextColor,
                           ),
                         ),
                       ),
@@ -65,13 +66,11 @@ class MeditationCardWidget extends StatelessWidget {
                     ListTile(
                       title: Text(
                         title,
-                        style: AppTextStyle.kBlackRegular
-                            .copyWith(fontSize: 15, color: Colors.white),
+                        style:GoogleFonts.aBeeZee(fontSize: 15, color: Colors.white),
                       ),
                       subtitle: Text(
                         subTitle,
-                        style: AppTextStyle.kBlackRegular
-                            .copyWith(fontSize: 10, color: Colors.white),
+                        style: GoogleFonts.aBeeZee(fontSize: 10, color: Colors.white),
                       ),
                     )
                   ],
@@ -79,6 +78,9 @@ class MeditationCardWidget extends StatelessWidget {
               ),
             ),
             Container(
+              height: MediaQuery.of(context).size.height*0.3,
+              
+              width: MediaQuery.of(context).size.width*0.3,
               child: Lottie.asset('$lottieAnimation'),
             ),
           ],
