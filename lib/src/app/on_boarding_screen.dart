@@ -28,8 +28,8 @@ class OnBoardingScreen extends StatelessWidget {
             child: Lottie.asset('assets/Images/med.json'),
           ),
           SizedBox(
-            height: 60,
-            width: 200,
+            height: MediaQuery.of(context).size.height*0.1,
+            width: MediaQuery.of(context).size.width*0.4,
             child: ElevatedButton(
               onPressed: () {
                 Get.toNamed(AppRouter.homeScreen);
@@ -44,6 +44,7 @@ class OnBoardingScreen extends StatelessWidget {
                 "Get Started",
                 style: TextStyle(fontSize: 16),
               ),
+              
             ),
           ),
         ],
