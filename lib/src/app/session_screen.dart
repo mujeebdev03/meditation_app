@@ -7,7 +7,6 @@ import 'package:med_app_/src/app/take_care_screen.dart';
 
 import '../../CommonWidgets.dart';
 
-
 class SessionScreen extends StatelessWidget {
   const SessionScreen({super.key});
 
@@ -22,7 +21,6 @@ class SessionScreen extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                
                 Column(
                   children: [
                     Text('Medatition',
@@ -31,8 +29,9 @@ class SessionScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 10),
                       child: Text(
-                          '  Basics Exercise for \n  begginers or Expercinced',style: GoogleFonts.aBeeZee(
-                            fontWeight: FontWeight.bold, fontSize: 14)),
+                          '  Basics Exercise for \n  begginers or Expercinced',
+                          style: GoogleFonts.aBeeZee(
+                              fontWeight: FontWeight.bold, fontSize: 14)),
                     ),
                   ],
                 ),
@@ -50,8 +49,7 @@ class SessionScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    common_sessions(
-                    ),
+                    common_sessions(),
                     common_sessions(),
                   ],
                 )
@@ -69,103 +67,105 @@ class SessionScreen extends StatelessWidget {
                   ],
                 )
               ],
-              
             ),
             FixHeight12(),
-              Column(
-                children: [
-                  
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                          color: Color.fromARGB(255, 238, 156, 150),
-                    ),
-                    child:Column(
-                      
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                       Container(
-                        alignment: Alignment.topRight,
-                        height: MediaQuery.of(context).size.height*0.02,
-                       width: MediaQuery.of(context).size.width*1,
-                        child:IconButton(onPressed: (){
-
-                        }, icon:Icon(Icons.more_vert,color: Colors.white,))
-                       ),
-                        Padding(
-                          padding: const EdgeInsets.only(left:10.0),
-                          child: Text('Weekly Goals'),
-                          
-                        ),
-                        FixHeight12(),
-                        Padding(
-                          padding: const EdgeInsets.only(left:10.0),
-                          child: Container(
-                            height: MediaQuery.of(context).size.height*0.01, 
-                  width: MediaQuery.of(context).size.width*0.6,
-                  color: Colors.grey,
-
-                          ),
-                        ),
-                     
-                      ],
-                    ),
-                  height: MediaQuery.of(context).size.height*0.1, 
-                  width: MediaQuery.of(context).size.width*0.9,
-              
-            ),
-            
-       ],
-      ),
-
-      Column(
-        children: [
-          Container(
-            alignment: Alignment.centerLeft,
-            child: Text('  This Week Status',style: GoogleFonts.aBeeZee(
-              fontSize: 28,
-              
-            ),),
-          ),
-          FixHeight12(),
-          Container(
-              height: MediaQuery.of(context).size.height*0.1, 
-                      width: MediaQuery.of(context).size.width*0.9,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                      WeekStatusContainer(),
-                      WeekStatusContainer(),
-                        ],
-                      ),
-                    ),
-                    FixHeight12(),
-                    FixHeight12(),
-        Center(
-          child: WeekStatusContainer()
-        )
-        
-        ],
-      ),
-      FixHeight12(),
-          Padding(
-            padding: const EdgeInsets.only(left:10.0,right: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            Column(
               children: [
-                Text('Mon',style:GoogleFonts.aBeeZee(),),
-                 Text('Tue',style:GoogleFonts.aBeeZee(),),
-                  Text('Wed',style:GoogleFonts.aBeeZee(),),
-                   InkWell(child: Text('Thur',style:GoogleFonts.aBeeZee(),),
-                   onTap: (){
-                    Get.to(TakeCareScreen());
-                   },
-                   ),
-                   
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Color.fromARGB(255, 238, 156, 150),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                          alignment: Alignment.topRight,
+                          height: MediaQuery.of(context).size.height * 0.02,
+                          width: MediaQuery.of(context).size.width * 1,
+                          child: IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.more_vert,
+                                color: Colors.white,
+                              ))),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: Text('Weekly Goals'),
+                      ),
+                      FixHeight12(),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10.0),
+                        child: LinearProgressIndicator(
+                          value: 0.3,
+                        ),
+                      ),
+                    ],
+                  ),
+                  height: MediaQuery.of(context).size.height * 0.1,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                ),
               ],
             ),
-          ),
-       ],
+            Column(
+              children: [
+                Container(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    '  This Week Status',
+                    style: GoogleFonts.aBeeZee(
+                      fontSize: 28,
+                    ),
+                  ),
+                ),
+                FixHeight12(),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.1,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      WeekStatusContainer(),
+                      WeekStatusContainer(),
+                    ],
+                  ),
+                ),
+                FixHeight12(),
+                FixHeight12(),
+                Center(child: WeekStatusContainer())
+              ],
+            ),
+            FixHeight12(),
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Mon',
+                    style: GoogleFonts.aBeeZee(),
+                  ),
+                  Text(
+                    'Tue',
+                    style: GoogleFonts.aBeeZee(),
+                  ),
+                  Text(
+                    'Wed',
+                    style: GoogleFonts.aBeeZee(),
+                  ),
+                  InkWell(
+                    child: Text(
+                      'Thur',
+                      style: GoogleFonts.aBeeZee(),
+                    ),
+                    onTap: () {
+                      Get.to(TakeCareScreen());
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     ));
@@ -185,7 +185,6 @@ class WeekStatusContainer extends StatelessWidget {
       child: Icon(
         Icons.boy,
         color: Colors.white,
-        
       ),
       decoration: BoxDecoration(
         color: Color.fromARGB(255, 243, 215, 137),
@@ -194,13 +193,6 @@ class WeekStatusContainer extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
 
 class common_sessions extends StatelessWidget {
   const common_sessions({
@@ -230,9 +222,7 @@ class common_sessions extends StatelessWidget {
             fixwidth6(),
             Text(
               'Start Medatition',
-              style: GoogleFonts.aBeeZee(
-                fontSize: 10
-              ),
+              style: GoogleFonts.aBeeZee(fontSize: 10),
             ),
           ],
         ),

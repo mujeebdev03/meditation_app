@@ -6,7 +6,6 @@ import 'package:med_app_/Const.dart';
 import 'package:med_app_/src/app/session_screen.dart';
 import '../../CommonWidgets.dart';
 
-
 class wellcomeBackScreen extends StatelessWidget {
   const wellcomeBackScreen({super.key});
 
@@ -14,20 +13,18 @@ class wellcomeBackScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      appBar: AppBar(backgroundColor: Colors.transparent,  actions: [
-      InkWell(
-        
+      appBar: AppBar(backgroundColor: Colors.transparent, actions: [
+        InkWell(
           child: Padding(
-            padding: const EdgeInsets.only(right:8.0),
+            padding: const EdgeInsets.only(right: 8.0),
             child: CircleAvatar(
-                           child: Icon(
+              child: Icon(
                 Icons.person,
                 size: 26.0,
-                
               ),
             ),
           ),
-          onTap: (){},
+          onTap: () {},
         ),
       ]),
       body: Column(
@@ -56,7 +53,10 @@ class wellcomeBackScreen extends StatelessWidget {
                     icon: Icon(Icons.star_border),
                   ),
                   FixHeight12(),
-                  Text("Claim" ,style: GoogleFonts.aBeeZee(),),
+                  Text(
+                    "Claim",
+                    style: GoogleFonts.aBeeZee(),
+                  ),
                 ],
               ),
               Column(
@@ -65,7 +65,10 @@ class wellcomeBackScreen extends StatelessWidget {
                     icon: Icon(Icons.star_border),
                   ),
                   FixHeight12(),
-                  Text("Relax",style: GoogleFonts.aBeeZee(),),
+                  Text(
+                    "Relax",
+                    style: GoogleFonts.aBeeZee(),
+                  ),
                 ],
               ),
               Column(
@@ -74,7 +77,10 @@ class wellcomeBackScreen extends StatelessWidget {
                     icon: Icon(Icons.star_border),
                   ),
                   FixHeight12(),
-                  Text("Focus",style: GoogleFonts.aBeeZee(),),
+                  Text(
+                    "Focus",
+                    style: GoogleFonts.aBeeZee(),
+                  ),
                 ],
               ),
               Column(
@@ -83,7 +89,10 @@ class wellcomeBackScreen extends StatelessWidget {
                     icon: Icon(Icons.star_border),
                   ),
                   FixHeight12(),
-                  Text("Anxious",style:GoogleFonts.aBeeZee(),),
+                  Text(
+                    "Anxious",
+                    style: GoogleFonts.aBeeZee(),
+                  ),
                 ],
               ),
             ],
@@ -92,16 +101,15 @@ class wellcomeBackScreen extends StatelessWidget {
           FixHeight12(),
           Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.orangeAccent
-              ),
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.orangeAccent),
               width: MediaQuery.of(context).size.width * 0.9,
               height: MediaQuery.of(context).size.height * 0.2,
               child: Row(
                 children: [
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.20,
-                    width: MediaQuery.of(context).size.width * 0.47,
+                    width: MediaQuery.of(context).size.width * 0.46,
                     child: Padding(
                       padding: const EdgeInsets.only(right: 10.0),
                       child: Column(
@@ -139,15 +147,14 @@ class wellcomeBackScreen extends StatelessWidget {
                                   InkWell(
                                     child: Text(
                                       'Start Medatition',
-                                      style:GoogleFonts.aBeeZee(
+                                      style: GoogleFonts.aBeeZee(
                                         fontSize: 10,
                                       ),
-                                      
                                     ),
-                                    onTap: (){
+                                    onTap: () {
                                       Get.to(SessionScreen());
                                     },
-                                  ), 
+                                  ),
                                   SizedBox(
                                     width: 1,
                                   ),
@@ -183,12 +190,12 @@ class wellcomeBackScreen extends StatelessWidget {
           FixHeight12(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              commonWellcomescreencontainer(
+            children: const [
+              RecommendedWidget(
                   pic: 'assets/Images/yoga2.png',
                   textR: 'Restortive',
                   textB: '20 Sessions'),
-              commonWellcomescreencontainer(
+              RecommendedWidget(
                   pic: 'assets/Images/yoga2.png',
                   textR: 'Energize',
                   textB: '15 Sessions')
@@ -200,107 +207,92 @@ class wellcomeBackScreen extends StatelessWidget {
   }
 }
 
-class commonWellcomescreencontainer extends StatelessWidget {
-  commonWellcomescreencontainer({
+class RecommendedWidget extends StatelessWidget {
+  const RecommendedWidget({
+    super.key,
     required this.pic,
     required this.textR,
     required this.textB,
-    Key? key,
-  }) : super(key: key);
-  String pic;
-  String textR;
-  String textB;
+  });
+
+  final String pic;
+  final String textR;
+  final String textB;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: MediaQuery.of(context).size.width * 0.4,
-          height: MediaQuery.of(context).size.height * 0.15,
-          decoration: BoxDecoration(
-              color: Color.fromARGB(255, 231, 206, 221),
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-              image: DecorationImage(
-                  alignment: Alignment.topCenter,
-                  image: AssetImage(
-                    '$pic',
-                  ))),
-        ),
-        Center(
-          child: SizedBox(
-            width: MediaQuery.of(context).size.width * 0.4,
-            height: MediaQuery.of(context).size.height * 0.14,
-            child: Center(
-              child: Stack(
-                fit: StackFit.expand,
-
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(10),
-                          bottomRight: Radius.circular(10)),
-                      color: Color.fromARGB(255, 231, 206, 221),
+    return Container(
+      height: context.height * 0.27,
+      width: context.width * 0.45,
+      alignment: Alignment.bottomCenter,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        // color: Colors.red,
+      ),
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              height: context.height * 0.23,
+              width: context.width * 0.45,
+              alignment: Alignment.bottomCenter,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: const Color.fromARGB(255, 231, 206, 221),
+              ),
+              child: Container(
+                  width: context.width * 0.35,
+                  height: context.height * 0.09,
+                  margin: const EdgeInsets.only(bottom: 12.0),
+                  decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      width: 1,
+                      color: const Color.fromARGB(255, 117, 69, 7),
                     ),
-                    width: MediaQuery.of(context).size.width * 0.5,
-                    height: MediaQuery.of(context).size.height * 0.12,
-                  ), //Container
-                  //Container
-                  Center(
-                    child: Container(
-                        width: MediaQuery.of(context).size.width * 0.35,
-                        height: MediaQuery.of(context).size.height * 0.09,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(
-                            width: 1,
-                            color: Color.fromARGB(255, 117, 69, 7),
-                          ),
-                        ),
-                        child: Column(
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text(
+                        textR,
+                        style: GoogleFonts.arsenal(fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
                           children: [
-                            Text(
-                              " $textR",
-                              style: GoogleFonts.arsenal(
-                                  fontWeight: FontWeight.bold),
+                            const Icon(
+                              Icons.play_circle,
+                              size: 15.0,
+                              color: Color.fromARGB(255, 117, 69, 7),
                             ),
-                            SizedBox(
-                              child: TextButton(
-                                style: ElevatedButton.styleFrom(),
-                                onPressed: () {},
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Icon(
-                                      // <-- Icon
-                                      Icons.play_circle,
-                                      size: 15.0,
-                                      color: Color.fromARGB(255, 117, 69, 7),
-                                    ),
-                                    Text(
-                                      '$textB',
-                                      style:GoogleFonts.aBeeZee(
-                                        color: Colors.white,
-                                      ),
-                                    ), 
-                                    SizedBox(
-                                      width: 5,
-                                    ),
-                                  ],
-                                ),
+                            Text(
+                              textB,
+                              style: GoogleFonts.aBeeZee(
+                                color: Colors.white,
                               ),
-                            )
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
                           ],
-                        )),
-                  ), //Container
-                ], //<Widget>[]
-              ), //Stack
-            ), //Center
-          ), //SizedBox
-        )
-      ],
+                        ),
+                      )
+                    ],
+                  )),
+            ),
+          ),
+          Image(
+            image: AssetImage(pic),
+            height: context.height * 0.15,
+            width: context.width * 0.45,
+          )
+        ],
+      ),
     );
   }
 }
